@@ -27,6 +27,12 @@ composer require tailonperin/openfire-restapi
 composer test
 ```
 
+### To-do
+- Send message to conferences
+- Send message individual (done)
+- Send message to multiples
+
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
