@@ -1,0 +1,54 @@
+{
+    "name": "tailonperin/openfire-restapi",
+    "description": "A Openfire integration with ChatAPI and RestAPI",
+    "keywords": [
+        "tailonperin",
+        "openfire-restapi"
+    ],
+    "homepage": "https://github.com/tailonperin/openfire-restapi",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tailon Perin",
+            "email": "tailonedson@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tailonperin\\OpenfireRestapi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tailonperin\\OpenfireRestapi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tailonperin\\OpenfireRestapi\\OpenfireRestapiServiceProvider"
+            ],
+            "aliases": {
+                "OpenfireRestapi": "Tailonperin\\OpenfireRestapi\\OpenfireRestapiFacade"
+            }
+        }
+    }
+}
