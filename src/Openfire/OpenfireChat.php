@@ -10,7 +10,6 @@ class OpenfireChat extends Base
 {
     protected $chatUser;
     protected $chatPassword;
-    
 
     public function __construct($chatUser = null, $chatPassword = null)
     {
@@ -30,7 +29,6 @@ class OpenfireChat extends Base
 
     public function enviarMensagem($mensagem, $to)
     {
-      
         
         //chat que vai enviar
         $chatStreamResponse = $this->login($this->chatUser, $this->chatPassword);
