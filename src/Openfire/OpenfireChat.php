@@ -8,13 +8,23 @@ use Illuminate\Support\Facades\Http;
 
 class OpenfireChat extends Base
 {
-    protected $chatUser;
-    protected $chatPassword;
+    public $chatUser;
+    public $chatPassword;
 
     public function __construct($chatUser = null, $chatPassword = null)
     {
-        $this->chatUser = config('openfire-restapi.chat.user');
-        $this->chatPassword = config('openfire-restapi.chat.password');
+        if($chatUser<>null){
+            $this->chatUser =$chatUser;
+        }
+        else{
+            $this->chatUser = config('openfire-restapi.chat.user');
+        }
+        if($chatUser<>null){
+            $this->chatPassword = $chatPassword;
+        }
+        else{
+            $this->chatPassword = config('openfire-restapi.chat.password');
+        }
 
         parent::__construct();
     }
